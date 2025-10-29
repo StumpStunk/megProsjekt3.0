@@ -20,6 +20,9 @@ img {
     height: auto;
     display: block;
 }
+figure {
+    margin: 0;
+}
 .stabak {
     background-color: #0a2a66;
 }
@@ -48,13 +51,20 @@ img {
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+    gap: 24px;
 }
 .card {
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.06);
     padding: 16px;
+}
+.card ul li a {
+    color: #1d4ed8;
+    font-weight: 500;
+}
+.card ul li a:hover {
+    text-decoration: underline;
 }
 .stabak .card { 
     background: #e6f0ff; 
@@ -87,17 +97,51 @@ a:hover{
 }
 /* Hero */
 .hero {
-    background-color: aliceblue;
-    padding: 64px 0;
+    background: linear-gradient(to right, #e0f2fe, #f8fafc);
+    text-align: center;
 }
 .hero .title {
-    font-size: 40px;
-    line-height: 1.2;
-    margin-bottom: 8px;
+    font-size: 48px;
+    font-weight: 700;
 }
 .hero .subtitle {
-    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
     color: #374151;
+}
+footer {
+    border-top: 1px solid #e5e7eb;
+    background: #ffffff;
+    padding: 24px 0;
+    margin-top: 48px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+footer a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    footer .container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
 }
 /* Galleri */
 .gallery-top{
@@ -129,12 +173,23 @@ a:hover{
     object-fit: cover;
     border-radius: 0;
 }
+.gallery-item:hover img {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
 .image-description {
     padding: 12px;
     font-size: 14px;
     color: #374151;
     text-align: center;
     margin: 0;
+    background: #ffffff;
+}
+figcaption.image-description {
+    padding: 12px;
+    font-size: 14px;
+    color: #374151;
+    text-align: center;
     background: #ffffff;
 }
 /* Timeplan */
